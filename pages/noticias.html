@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noticias y Comunicados | GuanaquerosNet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "background-light": "#f8fbfc",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d191b] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Navigation Bar -->
+<div id="site-header"></div>
+<main class="flex-1 px-4 md:px-20 lg:px-40 py-8">
+<div class="max-w-[1200px] mx-auto">
+<!-- Hero Section: Featured News -->
+<section class="mb-12">
+<div class="@container">
+<div class="relative overflow-hidden rounded-xl bg-cover bg-center min-h-[400px] md:min-h-[500px] flex flex-col justify-end p-6 md:p-12 group" alt="Vista panorámica de la bahía de Guanaqueros al atardecer" style='background-image: linear-gradient(to top, rgba(16, 31, 34, 0.9) 0%, rgba(16, 31, 34, 0.2) 60%, rgba(16, 31, 34, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBS5ikNu3JFY5I0KFbpmBGPWvFKEAe0Vio4OkbQphHrCREdjPSoG9vNIGWOFQFKm-5G22dmqderV5Zc3xN13khB6Z72cdC6Y3cmHmMpIeUyiHo95cJ4HAt5ogto6eXbs-I_UdteEQ2iQvE4DAsCpj32H4lPuQrqvOQypCNoPcOvKerA0d6-ChjyxeqIlY5GVatHXJtno4dx9NvccW9wAKmowDM5KbA1DT8nJ1o60nk_Y5wIrk4sIsf_jMmBQakIiIl9jq2eH2Ak1jI");'>
+<div class="flex flex-col gap-4 max-w-2xl animate-in fade-in slide-in-from-bottom-4">
+<span class="bg-primary text-[#0d191b] px-3 py-1 rounded text-xs font-bold uppercase tracking-widest w-fit">Destacado de la Semana</span>
+<h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
+                                    Gran Apertura de la Temporada Estival 2024 en Guanaqueros
+                                </h1>
+<p class="text-white/90 text-lg md:text-xl font-normal">
+                                    Descubre todas las actividades, nuevos servicios gastronómicos y preparativos para recibir a los turistas este verano en nuestra querida bahía.
+                                </p>
+<div class="flex items-center gap-4 mt-2">
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-[#0d191b] text-base font-bold shadow-lg hover:scale-105 transition-transform">
+                                        Leer reportaje completo
+                                    </button>
+<span class="text-white/70 text-sm italic">Publicado hace 3 horas • 12 min de lectura</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Main Content Column -->
+<div class="flex-1">
+<!-- Category Filter Bar -->
+<div class="flex flex-col gap-4 mb-8">
+<h2 class="text-2xl font-bold tracking-tight">Últimas Noticias</h2>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-primary text-[#0d191b] px-5 text-sm font-bold shadow-sm">Todos</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-[#e7f1f3] dark:bg-white/10 px-5 text-sm font-medium hover:bg-primary/20">Comunidad</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-[#e7f1f3] dark:bg-white/10 px-5 text-sm font-medium hover:bg-primary/20">Turismo</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-[#e7f1f3] dark:bg-white/10 px-5 text-sm font-medium hover:bg-primary/20">Avisos Oficiales</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-[#e7f1f3] dark:bg-white/10 px-5 text-sm font-medium hover:bg-primary/20">Medio Ambiente</button>
+</div>
+</div>
+<!-- News Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<article class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center rounded-xl overflow-hidden shadow-sm" alt="Pescadores trabajando en el muelle de Guanaqueros" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcktyssDOLHBBq6k4Bj5e7Emqo86I6ykYdq79h6XKQlQvnqUgn-wvjLwAgCdkH1p3bgFutvI91ijyEuM0g5IUDtUCgL9-x6AQ_XFIK5p1FjacWfAA7FRZ5Oh5yFLvKjWzvK1GICP1aThG58Hm6UWhW-rRDSldgBVFBxBdY4-xCmHGLpYOocmSnN9I2Cno4_gSyEOcmVh7TK9XRDOYm3xXQD4j7wW89zpoeAZEOW-mPcBI6QM7qk_43UuOdumcJHi5ynTTw7AaKVpM");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+<span>Comunidad</span>
+<span class="text-gray-300">•</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium normal-case">5 min lectura</span>
+</div>
+<h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Nuevas obras de pavimentación en el acceso norte al muelle</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">Las obras comenzarán este lunes y se espera que mejoren significativamente el flujo vehicular durante el verano.</p>
+<p class="text-gray-400 text-xs mt-1">Hoy, 10:45 AM</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center rounded-xl overflow-hidden shadow-sm" alt="Plato de mariscos frescos en restaurante local" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJe4d91GfL0o3_EYYkgGS2JoXri41wLctEdvXWBguiHhBfKS3LF9LBLxkA9cnrry3z4stthxQB0ezHu53D335tEdCVqBu7vTJBoteDZxQzlxFjO3RR61sShQCPpABqF5mPYTkmc0fiA5J2xFDw7aoxJqgGD-AOvdj7_K8zVe0RpMkOwl-fICTG_OPzxKSQZJLvC_e2GcylxFSbcGBxDN-jG8s2ozIRLvCnC57vWoUk-ChyjpsCoLBKN-k4YUaIsKW_llmVy149nNY");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+<span>Turismo</span>
+<span class="text-gray-300">•</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium normal-case">8 min lectura</span>
+</div>
+<h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Ruta Gastronómica: Las mejores picadas de empanadas</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">Recorrimos la costanera para encontrar el equilibrio perfecto entre sabor, tamaño y precio.</p>
+<p class="text-gray-400 text-xs mt-1">Ayer</p>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center rounded-xl overflow-hidden shadow-sm" alt="Operativo municipal de limpieza en playa" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLDse_i_MsO3fD9DUX9Bb9zA_zlVmouumctEDXD-l7xqWnDF0vwHptNl9Ixa3vGNhmndma4Gsd2g1nDUMx9Pl9jQuKLJGd0nB2Lrsnlzck620xXlIsTS9ShVOqfdm0dOKicr2TejLj8-bWc6fpZKpQziiA32l41DqN_JxsTmnciR2Zf_zI3whS1XXJ58cWb7m_A9tx3pN2d8nlooDwaU0MZLopwRWs-Arl9ICQYCtbuM8GNjxKJJkZlwA__IXxMXmNQkm7x9BjF0A");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+<span>Avisos Oficiales</span>
+<span class="text-gray-300">•</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium normal-case">3 min lectura</span>
+</div>
+<h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Corte programado de agua para el sector El Faro</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">Informamos a los vecinos que se realizarán trabajos de mantenimiento preventivo este jueves entre las 09:00 y 14:00.</p>
+<p class="text-gray-400 text-xs mt-1">Hace 2 días</p>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="flex flex-col gap-4 group cursor-pointer">
+<div class="w-full aspect-video bg-cover bg-center rounded-xl overflow-hidden shadow-sm" alt="Humedal costero con aves locales" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2hE1fMtsjPmZapNUEyPfGYVSkv23VHj9gxFt_RvRNiHSqQ7z61fEt68Wn9RM58QzEEleJ-NWHKrcVe8Iz1c5kL6xUutzFpELQ5VuD4qKWal-uV2YYm1RLmA4b5F9S_3WQ5Q8j0VowRPgrqahstuMWdAtxj_saNfms5iHd8Oms5gzZp3NywGgibYSCnj6QMQa58gdchBDuWnRcUpA-XXh8FAnJ-Xn2ggEpoIZPq3bJEH9M7qPVw_jAlpCNIMizVgYkaWqW3XNsg84");'>
+<div class="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+<span>Medio Ambiente</span>
+<span class="text-gray-300">•</span>
+<span class="text-gray-500 dark:text-gray-400 font-medium normal-case">6 min lectura</span>
+</div>
+<h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Protección del Humedal: Nuevas señaléticas educativas</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">Un grupo de voluntarios instaló paneles informativos para proteger la fauna silvestre de la zona.</p>
+<p class="text-gray-400 text-xs mt-1">Hace 3 días</p>
+</div>
+</article>
+</div>
+<div class="flex justify-center mt-12">
+<button class="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-[#0d191b] transition-all">
+                                Ver más noticias
+                                <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="w-full lg:w-80 flex flex-col gap-8">
+<!-- Search Bar -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#e7f1f3] dark:border-white/10 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Buscar Noticias</h3>
+<div class="relative">
+<input class="w-full bg-[#f8fbfc] dark:bg-background-dark border-none rounded-lg py-3 pl-4 pr-12 focus:ring-2 focus:ring-primary text-sm" placeholder="Escribe aquí..." type="text"/>
+<button class="absolute right-2 top-1.5 p-1.5 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Trending Topics -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#e7f1f3] dark:border-white/10 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Lo más buscado</h3>
+<div class="flex flex-wrap gap-2">
+<a class="px-3 py-1 bg-[#e7f1f3] dark:bg-white/10 rounded text-sm hover:text-primary transition-colors" href="#">#PlayaGuanaqueros</a>
+<a class="px-3 py-1 bg-[#e7f1f3] dark:bg-white/10 rounded text-sm hover:text-primary transition-colors" href="#">#FeriaLibre</a>
+<a class="px-3 py-1 bg-[#e7f1f3] dark:bg-white/10 rounded text-sm hover:text-primary transition-colors" href="#">#Empanadas</a>
+<a class="px-3 py-1 bg-[#e7f1f3] dark:bg-white/10 rounded text-sm hover:text-primary transition-colors" href="#">#PescaDeportiva</a>
+<a class="px-3 py-1 bg-[#e7f1f3] dark:bg-white/10 rounded text-sm hover:text-primary transition-colors" href="#">#Turismo2024</a>
+</div>
+</div>
+<!-- Newsletter Box -->
+<div class="bg-primary/10 dark:bg-primary/5 p-8 rounded-xl border-2 border-dashed border-primary/30 text-center flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary">mail</span>
+<h3 class="text-xl font-bold">¡Suscríbete al Boletín!</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">Recibe las noticias más importantes de Guanaqueros directamente en tu correo.</p>
+<input class="w-full bg-white dark:bg-background-dark border-none rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary text-sm text-center" placeholder="tu@email.com" type="email"/>
+<button class="w-full bg-primary text-[#0d191b] font-bold py-3 rounded-lg hover:brightness-110 transition-all shadow-md">
+                                Suscribirme ahora
+                            </button>
+<p class="text-[10px] text-gray-400">Prometemos no enviar spam. Puedes cancelar cuando quieras.</p>
+</div>
+<!-- Weather Widget (Custom Addition for Context) -->
+<div class="bg-gradient-to-br from-primary/20 to-primary/40 dark:from-primary/10 dark:to-primary/20 p-6 rounded-xl flex items-center justify-between border border-primary/20">
+<div>
+<p class="text-xs font-bold text-gray-500 dark:text-gray-300 uppercase">Clima actual</p>
+<p class="text-2xl font-black">21°C</p>
+<p class="text-sm">Parcialmente Nublado</p>
+</div>
+<span class="material-symbols-outlined text-5xl text-yellow-500">partly_cloudy_day</span>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div id="site-footer"></div>
+</div>
+
+  <script src="../js/include.js"></script>
+</body></html>

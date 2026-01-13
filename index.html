@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GuanaquerosNet - Tu guía costera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hide for carousel */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<div id="site-header"></div>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+<!-- Hero Section -->
+<section class="relative rounded-xl overflow-hidden min-h-[520px] flex items-center justify-center p-8 bg-slate-900">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" alt="High quality aerial view of Guanaqueros beach and bay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbKrUiHxPqTtZ4aBcWIXFCaQoMGXpDQFwUq497gLmJY2-y1GegxQyPfk0OwIIBLSuQl4_uyFx7GOxAU1DMajdGzyXHeL6OAysfZUAQZwxumkqh3A_Axt2-ttK5vXl7iku1svBGpl-ZUQ_v5cLowVctozBmkgwgXLv7r3nhXFX2s4TXDU_NSNIgtF6cDOExBUJ2Qv-HuC8fTgUXxb19Ra1O2y86SSexTu_x5Xtjb60MKUeKDLm6Y-Ps0lvHGpgR5TWrKYckHdv2tEw");'></div>
+<div class="relative z-10 text-center max-w-3xl space-y-8">
+<div class="space-y-4">
+<h1 class="text-white text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                        Descubre la magia de Guanaqueros
+                    </h1>
+<p class="text-slate-200 text-lg md:text-xl font-medium">
+                        Tu guía completa para vivir y visitar el paraíso costero.
+                    </p>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 shadow-lg shadow-primary/20 transition-all">
+<span class="material-symbols-outlined">explore</span> Explorar
+                    </button>
+<button class="bg-white hover:bg-slate-50 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 shadow-lg transition-all">
+<span class="material-symbols-outlined">restaurant</span> Comer
+                    </button>
+<button class="bg-white hover:bg-slate-50 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 shadow-lg transition-all">
+<span class="material-symbols-outlined">bed</span> Dormir
+                    </button>
+</div>
+</div>
+</section>
+<!-- Próximos Eventos Carousel -->
+<section class="space-y-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event</span> Próximos Eventos
+                </h2>
+<a class="text-primary font-semibold text-sm hover:underline" href="#">Ver calendario completo</a>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-4 hide-scrollbar">
+<!-- Event Card 1 -->
+<div class="min-w-[300px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 transition-transform hover:-translate-y-1">
+<div class="h-40 bg-cover bg-center" alt="Festive local market with colorful crafts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVTMjgXJMw-zjgXC2LGE9ZksKu0Ad8opXeakeJvNHbGJQeL_F3WG4PAPgtAFuhtFd7uKU79u6jgmWlJ0zFr6cy4K6bRcdd_SyJLGt_01QkvxiRMAf1MV3ewkx3ZXVpwIs8g50Nklzi-FO9Civ-oLQh-vAM6_A-in47x8_ehzIF3pqen1wP2VOTvJiegALhTlkeWBp4eSFaqZ8ca-r0Y4ObIZzN6rO0jD3pLpKHDCByRDSp5XsZVZhGBsoL0g42asze8Q2HVqUhHyg");'></div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase">
+<span class="bg-primary/10 px-2 py-1 rounded">Cultura</span>
+<span class="text-slate-500">• 15 Oct</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg">Feria Artesanal de Primavera</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">Explora el talento local en la costanera con más de 50 expositores.</p>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="min-w-[300px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 transition-transform hover:-translate-y-1">
+<div class="h-40 bg-cover bg-center" alt="Close up of fresh oysters on a plate" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC65PclCWHNSz26YXJwcDnZkw_i1ouyWlEO_34X9KyRpUhcXtnfryLf4oXGQxymxoiV_w1MYSyia4KJM0pq3Kv0mmF7apfgVF8l0OSD03oKTJh-KARVv5ZLUKeW68c8W3ljA6VjKJUrJsfDEE3GSX43uZMFcdJtdY05H6-Razn4YF8nBZ9TJCpp-zd0b9SXMsGf9rc6E7VdyluWEB2Hc1-_e3MhvVQH2Qyj81qRavuB_IGexhrJmN0nQpM52dAm8X9ql9Ptl80BRjI");'></div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase">
+<span class="bg-primary/10 px-2 py-1 rounded">Gastronomía</span>
+<span class="text-slate-500">• 22 Oct</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg">Festival del Ostión</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">Degustaciones en vivo y los mejores platos de nuestra bahía.</p>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="min-w-[300px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 transition-transform hover:-translate-y-1">
+<div class="h-40 bg-cover bg-center" alt="People practicing yoga on a beach at sunrise" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMfAmfUbHkrT-ecQpN8-LXFbtdBxrfAx5IwzTHkxH4pMNOlpoKKavyTQPyFopywFrK5VHdeMmSpydZ9qwr_TxFPPU56rAWLhOxkyN64-4J0DnC0gjrQIxVkLOjWSkIqzRbF7Q-wxQ5g-kwZuTbyKXbsBfO_pj7gcT00yfejV0CgkI6LUwlHRzIDjdeq8nLhC92ZR-V-Uc9xVDlKDsF6WWne74w6IvJPoUrCUncwCyHj2eeyNCl4M9GRPYl9irelfNz0e-LqeTxaR4");'></div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase">
+<span class="bg-primary/10 px-2 py-1 rounded">Deporte</span>
+<span class="text-slate-500">• 28 Oct</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg">Yoga frente al Mar</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">Sesión gratuita al amanecer en el sector del muelle.</p>
+</div>
+</div>
+<!-- Event Card 4 -->
+<div class="min-w-[300px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 transition-transform hover:-translate-y-1">
+<div class="h-40 bg-cover bg-center" alt="Concert stage with lights at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmA4nMZlXTn8ZyAm_qxmnQ6Sp7O7WvPo8j2F9UL9wYndAeMPd8xynLEQ7PvbPwAKPxIkz6wGMvxvZ1Qm6JXVmGq7oXi2NRbqLYGq43HaW1skyrtw1YHChkBbaYtoJdG02j9dxGcBpb3ByiI0EbFgq2UamBPFGRdyxqX3_iBYULHnLt0234Z1HywaYlQVxZZZcQWuHdqri_h2W5Sll40NrrY8hcLWhgT0HvDNkUCDX8WYBuW8zDVHuphKsvOrV0flVeQGyTL1iCHgo");'></div>
+<div class="p-4 space-y-2">
+<div class="flex items-center gap-2 text-xs font-bold text-primary uppercase">
+<span class="bg-primary/10 px-2 py-1 rounded">Comunidad</span>
+<span class="text-slate-500">• 05 Nov</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white text-lg">Noche de Jazz Local</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm line-clamp-2">Música en vivo y ambiente familiar bajo las estrellas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Lo Destacado Section -->
+<section class="grid lg:grid-cols-2 gap-8">
+<div class="space-y-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 px-2">
+<span class="material-symbols-outlined text-orange-500">restaurant</span> Gastronomía Destacada
+                </h2>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-lg bg-cover bg-center shrink-0" alt="Rustic seafood restaurant interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBE1IOzg7GsbAw0TJuwNX9FyFb4NrfXsWsSRSzmSgfvZFAgqtvGLoi36JzPEpYIWbrdfiuI0MvopAsyhYH5xU270B6LDv_0zRrHCAl9iu_37Zs-llq9zaIk_l7oVdDcsxisBnPngdC0TumcoIbyp34WzxVlhX66xdvsCb41QyIxFVIm2MSdIBXBrtoHLzDx6zX-7MtKp8XLU6bHxKs-nYXD0jpQ4MB9VQO0jJw2lAO9j8n31uAUIEDCj61BHY1zYjzPmqML9eEndB8");'></div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between">
+<h4 class="font-bold dark:text-white">Restaurante El Suiche</h4>
+<span class="flex items-center text-yellow-500 text-sm font-bold"><span class="material-symbols-outlined text-sm">star</span> 4.8</span>
+</div>
+<p class="text-sm text-slate-500">Especialidad en mariscales y pescados fritos.</p>
+<span class="inline-block text-xs font-medium text-slate-400">$$ • Abierto ahora</span>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-lg bg-cover bg-center shrink-0" alt="Grilled fish dish on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSqtqSXxGECu8GPTNDzAmRrxbIP9utr9oSrgC3Au2A86iX5UdNKvqu5io-i2wHclSJdUZx8p7d9f_sEpmrT23-Jue1IYFwijrIViXyVnRI5siYX6IMHIDssWoObYBRwfA9McVQDsFDmEmGchzX7eCHGBlXDrsXSLKKs2GsLXDLL3yOX6noTZVAdT1V3vDX-EJfn-DHrrec6E45sHuinV84zXtHK_KhE-Wx9HaBMwuXnDfwilXL7CEAhle4IE3-EsZ2EA1e8W-G3LE");'></div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between">
+<h4 class="font-bold dark:text-white">Picá de la Costa</h4>
+<span class="flex items-center text-yellow-500 text-sm font-bold"><span class="material-symbols-outlined text-sm">star</span> 4.5</span>
+</div>
+<p class="text-sm text-slate-500">El mejor ceviche de la cuarta región.</p>
+<span class="inline-block text-xs font-medium text-slate-400">$ • Cierra a las 22:00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2 px-2">
+<span class="material-symbols-outlined text-teal-500">home_work</span> Alojamiento Recomendado
+                </h2>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-lg bg-cover bg-center shrink-0" alt="Luxury coastal boutique hotel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDg8UBhBMiV7qu2lkGY3rnZ5rrsR--NSx6qAvTzdj1LXPVWI8YZuUIXd8av-YbMDboXbttGIQ4UZ8YK0gC5sOtCE7zF2lUyF2AJNfxF7ifD59wmtTpAZHJHf3I-3EUZekcL5R6nYTd3uGNbyXBmzLUmVJld5Q_-qhesgvEQQZqGzpdT8fLAYiDCCsiEZUg-Wk1NvFYWeJ_lxikC15GyZjOsh2iv7hvdi0NJUlLB1G3VrIqowUrT5uuAsYYdThU86V5eTYDObNolZzE");'></div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between">
+<h4 class="font-bold dark:text-white">Hotel Bahía Azul</h4>
+<span class="flex items-center text-yellow-500 text-sm font-bold"><span class="material-symbols-outlined text-sm">star</span> 4.9</span>
+</div>
+<p class="text-sm text-slate-500">Vista panorámica y piscina temperada.</p>
+<span class="inline-block text-xs font-medium text-slate-400">$$$ • Disponible</span>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 rounded-lg bg-cover bg-center shrink-0" alt="Cozy wooden cabin near the beach" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrMZ9pBtCqBT7tNVjiXljh4ap1GJNYkwcpC2V_7E3joRRBc-qqMGSbiMaQGK7FrP590QUrefzUpsurPo3AY2Mgrm2r0UcXl52HPK5BB2-uSb9eRhHJs9vktd-OtwYvhe5Vr2TfQBZJsfIZMlPa_j-Eqat9LGY23Qy0iIJL8lDAUGwtoq3_vDdk7JzBkgVY32GJqQaHiEj89GZQsNZEUWDZ_JKg1QHFEkaVTA4S-bGbQ5IfwLwyjXSKPPjHGuogv07RnbysY1IG3bM");'></div>
+<div class="flex-1 space-y-1">
+<div class="flex justify-between">
+<h4 class="font-bold dark:text-white">Cabañas Las Dunas</h4>
+<span class="flex items-center text-yellow-500 text-sm font-bold"><span class="material-symbols-outlined text-sm">star</span> 4.6</span>
+</div>
+<p class="text-sm text-slate-500">Cabañas familiares a pasos de la arena.</p>
+<span class="inline-block text-xs font-medium text-slate-400">$$ • Pocas vacantes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comunidad Section (Instagram Grid style) -->
+<section class="space-y-6">
+<div class="text-center space-y-2">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Nuestra Comunidad</h2>
+<p class="text-slate-500">Comparte tus momentos con <span class="text-primary font-bold">#GuanaquerosNet</span></p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square rounded-lg bg-slate-200 overflow-hidden group relative">
+<img alt="" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="Sunny beach day at Guanaqueros with blue water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkz-iYI1KbvIm6d3L_0MT3zgssyWPplHDaJ4p-J3kD6CzO_1l0n7DSjcuPBiF7JIIriw0YWDki5VXp2NGoIWdTWmh4Nir2eJ8zfGQSamFwL3jiXjFGH2a4vI0QwTyE39zL6htG6kmFXDgr-P_xenpLkOHZQKllbICXeJ9xfketQyo1gB1O2vVNgNKLVQ3BT2koqEdLpjH0gKmIxngnKjzk_AjTB-nCyM_5XfkUGuiPFPAsUf3EUrEGRKw6BJ9-UIX23Fue4QTtJeA"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white material-symbols-outlined">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-slate-200 overflow-hidden group relative">
+<img alt="" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="Fishermen bringing in boats at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGkjNTnhhiJkA4M8NYFpEN8TYqFfek7uMh_IW9CfYIFRsdWL_QBAEDzXBymx0o7Ry43yYqi0ZvjkMWyeoocvwLnEd-zRwgLGo6NCOpzEfQ-LFc3bpk7tQJwNVA4FZJldmX5G9rzqMsKMhtDu68EfMUilSml7Mym70xsm_N3afFE_4d3l3Gvxns5vXDt9YeEDMW74UhD9l-ogcqafYCHJ7IC0G_C3wEotEUrgtzhsO05_P8huIb0Eb_3jHsyK8kVOLrXdYXDwakpm0"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white material-symbols-outlined">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-slate-200 overflow-hidden group relative">
+<img alt="" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="Traditional Chilean empanadas on a platter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd2xAEETY69nOJYe5Qs9vti6-Zi9GHwWJM2NgZjgGN5zdwcyBdEv7z29UAZCwozFc6VIroUu_8_1gwGZsC3NS3Vq4Nh1oNrw1p8dRRUueRFh1WZjvxLLn0dQQmXCm0BB2vMlaBRCT5Cck0wJsPCpptHeDuxBVbxQkg4rQMydTnKpmhHtVJ0vXdsDSSs3Ti4WiGmGhL4yr8P3iVkacKopcNQp6lXyqYUlsECFJjQkblaTfDhPirI8y3ZRzqdjrZuCaQOCNMXPgooS0"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white material-symbols-outlined">favorite</span>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-slate-200 overflow-hidden group relative">
+<img alt="" class="w-full h-full object-cover transition-transform group-hover:scale-110" alt="Local children playing in the sand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv8FEAFS3vQIAI8B1Zxpnd-Ar1d7gZW12ulYKWx6a00Lz250ipoYpirZyMJU5OZPbpojCBNLlqzo0zUrp7Ad56opYVHWF6QBEHIqAs5T29GqILYLBvfpOyFPTOloYZmvtlHBi85lLo_FGvz5OZKf9aJAsnIusuFUuz5u5PnDAE1Mrqf3wQ3jAmq7xma8Hb69hI5vdMgccEa0HccJt2jqoABBv3F_Xk5Wpugki_KoQ2F2KJdU6-vXRos4SRxglwKI6Vz9u3BaL7HsE"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white material-symbols-outlined">favorite</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+</body></html>

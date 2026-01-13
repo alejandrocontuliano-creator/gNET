@@ -1,0 +1,19 @@
+[
+  {
+    "id": "challaa-2026",
+    "title": "Carnaval de Ch’alla - Guanaqueros",
+    "slug": "carnaval-de-challa-2026",
+    "start_datetime": "2026-01-23T18:00:00-04:00",
+    "end_datetime": "2026-01-24T23:59:00-04:00",
+    "location_text": "Plaza / Centro de Guanaqueros",
+    "organizer_name": "Organización local",
+    "poster_image": "assets/sample/challa.svg",
+    "description": "Celebración comunitaria con música, comparsas y actividades familiares.",
+    "tags": [
+      "Cultura",
+      "Comunidad",
+      "Verano"
+    ],
+    "links": []
+  }
+]

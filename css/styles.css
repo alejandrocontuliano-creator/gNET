@@ -1,0 +1,5 @@
+/* GuanaquerosNet base styles (minimal; Tailwind provides most styling) */
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+a { text-decoration-thickness: 2px; text-underline-offset: 3px; }

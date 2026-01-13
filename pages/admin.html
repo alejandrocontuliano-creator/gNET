@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GuanaquerosNet - Admin simple</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+  <div id="site-header"></div>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <h1 class="text-2xl md:text-3xl font-extrabold">Admin simple (sin servidor)</h1>
+    <p class="text-slate-600 mt-2">
+      Este panel es <b>local</b>: carga tus JSON actuales, te deja agregar entradas y luego descarga los JSON actualizados.
+      Útil mientras no conectamos Supabase o un CMS.
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+      <section class="bg-white border border-slate-100 rounded-3xl p-6">
+        <h2 class="text-lg font-semibold">Agregar lugar (Place)</h2>
+        <form id="place-form" class="mt-4 space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="text-sm text-slate-600">Tipo</label>
+              <select id="p-type" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2">
+                <option value="alojamiento">Alojamiento</option>
+                <option value="gastronomia">Gastronomía</option>
+                <option value="servicio">Servicio</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm text-slate-600">Sector</label>
+              <input id="p-sector" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Centro / Caleta / ..." />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Nombre</label>
+            <input id="p-name" required class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Nombre del lugar" />
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Descripción corta</label>
+            <input id="p-desc" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Una línea breve" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="text-sm text-slate-600">Precio mínimo (opcional)</label>
+              <input id="p-min" type="number" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" />
+            </div>
+            <div>
+              <label class="text-sm text-slate-600">Precio máximo (opcional)</label>
+              <input id="p-max" type="number" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">WhatsApp (opcional)</label>
+            <input id="p-wa" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="+569..." />
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Dirección (opcional)</label>
+            <input id="p-addr" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Dirección o referencia" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="text-sm text-slate-600">Lat (opcional)</label>
+              <input id="p-lat" type="number" step="any" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" />
+            </div>
+            <div>
+              <label class="text-sm text-slate-600">Lng (opcional)</label>
+              <input id="p-lng" type="number" step="any" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Tags (separados por coma)</label>
+            <input id="p-tags" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Familiar, Cerca de playa, ..." />
+          </div>
+
+          <button class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white text-sm w-full hover:opacity-90">
+            <span class="material-symbols-outlined" style="font-size:18px">add</span>
+            Agregar a la lista
+          </button>
+        </form>
+
+        <div class="mt-4 flex gap-2">
+          <button id="download-places" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-200 bg-white text-sm hover:bg-slate-50 w-full">
+            <span class="material-symbols-outlined" style="font-size:18px">download</span>
+            Descargar places.json
+          </button>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-3">Luego reemplaza el archivo en <code>/data/places.json</code>.</p>
+      </section>
+
+      <section class="bg-white border border-slate-100 rounded-3xl p-6">
+        <h2 class="text-lg font-semibold">Agregar evento</h2>
+        <form id="event-form" class="mt-4 space-y-3">
+          <div>
+            <label class="text-sm text-slate-600">Título</label>
+            <input id="e-title" required class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Nombre del evento" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="text-sm text-slate-600">Inicio (ISO)</label>
+              <input id="e-start" required class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="2026-01-23T18:00:00-04:00" />
+            </div>
+            <div>
+              <label class="text-sm text-slate-600">Término (ISO, opcional)</label>
+              <input id="e-end" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="2026-01-24T23:59:00-04:00" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Lugar</label>
+            <input id="e-loc" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Plaza / Centro..." />
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Organiza (opcional)</label>
+            <input id="e-org" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Organización..." />
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Descripción</label>
+            <textarea id="e-desc" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" rows="4" placeholder="Detalles del evento"></textarea>
+          </div>
+
+          <div>
+            <label class="text-sm text-slate-600">Tags (coma)</label>
+            <input id="e-tags" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2" placeholder="Cultura, Comunidad" />
+          </div>
+
+          <button class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white text-sm w-full hover:opacity-90">
+            <span class="material-symbols-outlined" style="font-size:18px">add</span>
+            Agregar a la lista
+          </button>
+        </form>
+
+        <div class="mt-4 flex gap-2">
+          <button id="download-events" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-slate-200 bg-white text-sm hover:bg-slate-50 w-full">
+            <span class="material-symbols-outlined" style="font-size:18px">download</span>
+            Descargar events.json
+          </button>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-3">Luego reemplaza el archivo en <code>/data/events.json</code>.</p>
+      </section>
+    </div>
+
+    <section class="bg-white border border-slate-100 rounded-3xl p-6 mt-8">
+      <h2 class="text-lg font-semibold">Vista rápida</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
+        <div>
+          <div class="text-sm font-semibold">Places cargados</div>
+          <pre id="places-preview" class="mt-2 text-xs bg-slate-50 border border-slate-100 rounded-2xl p-3 overflow-auto max-h-64"></pre>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Eventos cargados</div>
+          <pre id="events-preview" class="mt-2 text-xs bg-slate-50 border border-slate-100 rounded-2xl p-3 overflow-auto max-h-64"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
