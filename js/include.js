@@ -1,5 +1,12 @@
 // Shared header/footer loader for GuanaquerosNet (static site)
 // Works when served over http(s) (not file://) because it uses fetch()
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const SUPABASE_URL = "https://xaiootinejvdxmdmoxru.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_SeK_3zXpC00QciTtR0mLVQ_oSWGiHb_";
+
+window.sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 (function () {
   function computeBasePrefix() {
     // Example paths:
@@ -17,14 +24,6 @@
     if (!dirs.length) return "";
     return dirs.map(() => "..").join("/") + "/";
   }
-  <script type="module">
-  import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
-  const SUPABASE_URL = "https://xaiootinejvdxmdmoxru.supabase.co";
-  const SUPABASE_ANON_KEY = "sb_publishable_SeK_3zXpC00QciTtR0mLVQ_oSWGiHb_";
-
-  window.sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-</script>
 
   const BASE = computeBasePrefix();
   window.__BASE_PATH__ = BASE;
