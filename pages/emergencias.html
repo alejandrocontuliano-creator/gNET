@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GuanaquerosNet - Centro de Emergencias</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1313",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b0d0d] dark:text-white transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<div id="site-header"></div>
+<main class="flex-1 flex justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[1200px] w-full px-6 gap-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-end gap-4 bg-white dark:bg-[#2d1a1a] p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-[#1b0d0d] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Centro de Emergencias Hub</h1>
+<p class="text-[#9a4c4c] dark:text-red-300 text-lg font-medium">Asistencia inmediata y recursos de evacuación para la comunidad de Guanaqueros.</p>
+</div>
+<div class="flex items-center gap-3 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-lg border border-green-200 dark:border-green-800">
+<span class="flex h-3 w-3 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-green-800 dark:text-green-300 text-sm font-bold">Estado del Sistema: Normal</span>
+</div>
+</div>
+<!-- Section: Llamada Directa -->
+<section>
+<div class="flex items-center gap-2 mb-4 px-2">
+<span class="material-symbols-outlined text-primary">phone_in_talk</span>
+<h2 class="text-[#1b0d0d] dark:text-white text-2xl font-bold leading-tight tracking-tight">Llamada Directa de Emergencia</h2>
+</div>
+<!-- Emergency Action Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- SAMU -->
+<div class="group flex flex-col bg-white dark:bg-[#2d1a1a] border-2 border-primary/10 rounded-xl overflow-hidden shadow-md hover:border-primary transition-all cursor-pointer">
+<div class="bg-primary p-4 flex justify-between items-center text-white">
+<span class="text-3xl font-black">131</span>
+<span class="material-symbols-outlined text-4xl">medical_services</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<h3 class="text-xl font-bold">SAMU</h3>
+<p class="text-[#9a4c4c] dark:text-red-200/70 text-sm font-medium">Ambulancia / Urgencias Médicas Vitales</p>
+<button class="mt-4 w-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-white py-3 rounded-lg font-bold group-hover:bg-primary group-hover:text-white transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">call</span> Llamar Ahora
+                                    </button>
+</div>
+</div>
+<!-- Bomberos -->
+<div class="group flex flex-col bg-white dark:bg-[#2d1a1a] border-2 border-primary/10 rounded-xl overflow-hidden shadow-md hover:border-primary transition-all cursor-pointer">
+<div class="bg-primary p-4 flex justify-between items-center text-white">
+<span class="text-3xl font-black">132</span>
+<span class="material-symbols-outlined text-4xl">fire_truck</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<h3 class="text-xl font-bold">Bomberos</h3>
+<p class="text-[#9a4c4c] dark:text-red-200/70 text-sm font-medium">Fuego / Rescate Vehicular / Accidentes</p>
+<button class="mt-4 w-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-white py-3 rounded-lg font-bold group-hover:bg-primary group-hover:text-white transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">call</span> Llamar Ahora
+                                    </button>
+</div>
+</div>
+<!-- Carabineros -->
+<div class="group flex flex-col bg-white dark:bg-[#2d1a1a] border-2 border-primary/10 rounded-xl overflow-hidden shadow-md hover:border-primary transition-all cursor-pointer">
+<div class="bg-primary p-4 flex justify-between items-center text-white">
+<span class="text-3xl font-black">133</span>
+<span class="material-symbols-outlined text-4xl">local_police</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<h3 class="text-xl font-bold">Carabineros</h3>
+<p class="text-[#9a4c4c] dark:text-red-200/70 text-sm font-medium">Seguridad Pública / Emergencias Policiales</p>
+<button class="mt-4 w-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-white py-3 rounded-lg font-bold group-hover:bg-primary group-hover:text-white transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">call</span> Llamar Ahora
+                                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Tsunami Section -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400">tsunami</span>
+<h2 class="text-[#1b0d0d] dark:text-white text-[22px] font-bold leading-tight tracking-tight">Mapa de Evacuación Tsunami</h2>
+</div>
+<div class="flex gap-2">
+<div class="flex items-center gap-2 px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800 rounded-lg text-xs font-bold uppercase">
+<span class="w-3 h-3 bg-green-500 rounded-full"></span> Zonas Seguras
+                                </div>
+<div class="flex items-center gap-2 px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 rounded-lg text-xs font-bold uppercase">
+<span class="w-3 h-3 bg-blue-500 rounded-full"></span> Vías Evacuación
+                                </div>
+</div>
+</div>
+<!-- Map Container -->
+<div class="relative w-full aspect-[21/9] bg-[#e5e7eb] dark:bg-[#3d2424] rounded-xl overflow-hidden border border-primary/20 shadow-lg group">
+<!-- Visual Placeholder for Map -->
+<div class="absolute inset-0 bg-center bg-cover" alt="Map of Guanaqueros showing evacuation routes and safe zones" data-location="Guanaqueros, Chile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSLHSKi-jsNAhvSUiujtjTDSEAw1rbXDBjSpBWdy-tkn77--aenXvC3QPgqI-8JP6IPTMWjDu23BxB90snHl-M98D9T8jAtetj1GuGL2CpUvTzvyvDmrvp5QR7iJ00RDkni-4ihHxrol4FaQ9z_B41KxEqzKXBE6AXJRFoaS3ha8pkumMaH7ZqFk8V3Cz5vSSfnVGE98god-eJ_3IFAQD-Fn1uqnAVPaDOyXkEodQu7EbaBc9SV7bc7t6tq4BSUHgaWrIc4ImTynQ');">
+<!-- Simulated Markers -->
+<div class="absolute top-[20%] left-[45%] flex flex-col items-center">
+<span class="material-symbols-outlined text-green-600 text-4xl drop-shadow-md">location_on</span>
+<span class="bg-white dark:bg-background-dark px-2 py-0.5 rounded shadow text-[10px] font-bold">ZONA SEGURA A</span>
+</div>
+<div class="absolute top-[35%] left-[65%] flex flex-col items-center">
+<span class="material-symbols-outlined text-green-600 text-4xl drop-shadow-md">location_on</span>
+<span class="bg-white dark:bg-background-dark px-2 py-0.5 rounded shadow text-[10px] font-bold">ZONA SEGURA B</span>
+</div>
+<div class="absolute top-[50%] left-[10%] flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-4xl drop-shadow-md animate-bounce">warning</span>
+<span class="bg-white dark:bg-background-dark px-2 py-0.5 rounded shadow text-[10px] font-bold">ÁREA DE RIESGO</span>
+</div>
+<!-- Route Lines (Simulation) -->
+<div class="absolute inset-0 pointer-events-none">
+<svg class="w-full h-full" fill="none" viewbox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+<path d="M100 400 L540 100" opacity="0.6" stroke="#3b82f6" stroke-dasharray="10 5" stroke-width="4"></path>
+<path d="M800 450 L780 170" opacity="0.6" stroke="#3b82f6" stroke-dasharray="10 5" stroke-width="4"></path>
+</svg>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="bg-white dark:bg-[#1b0d0d] p-2 rounded-lg shadow-lg hover:bg-gray-100 dark:hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-white dark:bg-[#1b0d0d] p-2 rounded-lg shadow-lg hover:bg-gray-100 dark:hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="bg-primary text-white p-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+<div class="absolute top-4 left-4 max-w-[240px] bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm p-4 rounded-lg shadow-xl border border-primary/10">
+<h4 class="font-bold text-sm mb-2">Instrucciones de Evacuación</h4>
+<ul class="text-xs space-y-2 text-[#9a4c4c] dark:text-red-200">
+<li class="flex gap-2">
+<span class="font-bold text-primary">1.</span> Mantenga la calma y diríjase a pie a las zonas altas.
+                                    </li>
+<li class="flex gap-2">
+<span class="font-bold text-primary">2.</span> Siga las flechas azules en el pavimento.
+                                    </li>
+<li class="flex gap-2">
+<span class="font-bold text-primary">3.</span> No use vehículos a menos que sea estrictamente necesario.
+                                    </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Utility Contacts Section -->
+<section class="pb-12">
+<div class="flex items-center gap-2 mb-4 px-2">
+<span class="material-symbols-outlined text-gray-500">contact_phone</span>
+<h2 class="text-[#1b0d0d] dark:text-white text-xl font-bold leading-tight tracking-tight">Servicios de Utilidad Local</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 bg-white dark:bg-[#2d1a1a] rounded-lg border border-gray-200 dark:border-[#3d1e1e] shadow-sm hover:shadow-md transition-shadow">
+<p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Electricidad</p>
+<p class="text-lg font-black text-primary">600 770 7000</p>
+<p class="text-sm font-medium">CGE - Emergencias</p>
+</div>
+<div class="p-4 bg-white dark:bg-[#2d1a1a] rounded-lg border border-gray-200 dark:border-[#3d1e1e] shadow-sm hover:shadow-md transition-shadow">
+<p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Agua Potable</p>
+<p class="text-lg font-black text-primary">600 400 4444</p>
+<p class="text-sm font-medium">Aguas del Valle</p>
+</div>
+<div class="p-4 bg-white dark:bg-[#2d1a1a] rounded-lg border border-gray-200 dark:border-[#3d1e1e] shadow-sm hover:shadow-md transition-shadow">
+<p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Posta Guanaqueros</p>
+<p class="text-lg font-black text-primary">51 2 481134</p>
+<p class="text-sm font-medium">Urgencia Local</p>
+</div>
+<div class="p-4 bg-white dark:bg-[#2d1a1a] rounded-lg border border-gray-200 dark:border-[#3d1e1e] shadow-sm hover:shadow-md transition-shadow">
+<p class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Mun. Coquimbo</p>
+<p class="text-lg font-black text-primary">1420</p>
+<p class="text-sm font-medium">Seguridad Municipal</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<div id="site-footer"></div>
+</div>
+</div>
+
+  <script src="../js/include.js"></script>
+</body></html>

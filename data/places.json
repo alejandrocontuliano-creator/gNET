@@ -1,0 +1,77 @@
+[
+  {
+    "id": "aloja-olamar",
+    "type": "alojamiento",
+    "name": "Cabañas OlaMar",
+    "slug": "cabanas-olamar",
+    "sector": "Centro",
+    "description_short": "Cabañas familiares a pasos de la playa, con estacionamiento y Wi‑Fi.",
+    "price_min": 45000,
+    "price_max": 90000,
+    "tags": [
+      "Familiar",
+      "Cerca de playa",
+      "Estacionamiento"
+    ],
+    "amenities": [
+      "Wi‑Fi",
+      "TV",
+      "Cocina equipada"
+    ],
+    "photos": [
+      "assets/sample/olamar.svg"
+    ],
+    "contact_whatsapp": "+56912345678",
+    "website": "",
+    "instagram": ""
+  },
+  {
+    "id": "gastro-caleta",
+    "type": "gastronomia",
+    "name": "Sazón de Caleta",
+    "slug": "sazon-de-caleta",
+    "sector": "Caleta",
+    "description_short": "Mariscos y pescados del día, cocina local con vista al mar.",
+    "price_min": 8000,
+    "price_max": 25000,
+    "tags": [
+      "Mariscos",
+      "Local",
+      "Vista al mar"
+    ],
+    "amenities": [
+      "Terraza",
+      "Para llevar"
+    ],
+    "photos": [
+      "assets/sample/sazon.svg"
+    ],
+    "contact_whatsapp": "+56923456789",
+    "website": "",
+    "instagram": ""
+  },
+  {
+    "id": "serv-tours",
+    "type": "servicio",
+    "name": "Tours Guanaqueros 360",
+    "slug": "tours-guanaqueros-360",
+    "sector": "Plaza",
+    "description_short": "Recorridos guiados, recomendaciones y panoramas para toda la familia.",
+    "price_min": 0,
+    "price_max": 0,
+    "tags": [
+      "Tours",
+      "Familia",
+      "Panoramas"
+    ],
+    "amenities": [
+      "Reservas WhatsApp"
+    ],
+    "photos": [
+      "assets/sample/tours.svg"
+    ],
+    "contact_whatsapp": "+56934567890",
+    "website": "",
+    "instagram": ""
+  }
+]

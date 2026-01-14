@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro de Emprendedores - GuanaquerosNet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13c8ec",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .step-inactive {
+            color: #4c8d9a;
+        }
+    </style>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display">
+<!-- Top Navigation Bar -->
+<div id="site-header"></div>
+<!-- Main Registration Flow -->
+<main class="flex-1 flex flex-col items-center justify-start py-12 px-4">
+<div class="w-full max-w-[640px] flex flex-col gap-8">
+<!-- Progress Tracker -->
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-white/5 rounded-xl border border-[#cfe3e7] dark:border-white/10">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-[#0d191b] dark:text-white text-base font-semibold leading-normal">Registro de Emprendedor</p>
+<p class="text-[#0d191b] dark:text-white text-sm font-bold leading-normal bg-primary/20 px-3 py-1 rounded-full">Paso 1 de 3</p>
+</div>
+<div class="rounded-full bg-[#cfe3e7] dark:bg-white/10 h-3 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 33.33%;"></div>
+</div>
+<div class="flex justify-between">
+<p class="text-primary text-xs font-bold uppercase tracking-wider">Cuenta</p>
+<p class="text-[#4c8d9a] text-xs font-medium uppercase tracking-wider">Negocio</p>
+<p class="text-[#4c8d9a] text-xs font-medium uppercase tracking-wider">Verificación</p>
+</div>
+</div>
+<!-- Content Area: Step 1 Example -->
+<div class="bg-white dark:bg-white/5 rounded-xl border border-[#cfe3e7] dark:border-white/10 overflow-hidden shadow-sm">
+<!-- Headline Section -->
+<div class="pt-10 pb-4 px-8 text-center">
+<h1 class="text-[#0d191b] dark:text-white tracking-tight text-[32px] font-bold leading-tight">¡Únete a nuestra comunidad!</h1>
+<p class="text-[#4c8d9a] dark:text-white/60 text-base font-normal leading-normal mt-2">
+                        Comienza creando tu cuenta personal para registrar tu emprendimiento en Guanaqueros.
+                    </p>
+</div>
+<!-- Form Section -->
+<form class="p-8 flex flex-col gap-6">
+<div class="grid grid-cols-1 gap-6">
+<!-- Name Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d191b] dark:text-white text-sm font-bold px-1">Nombre Completo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#4c8d9a]">person</span>
+<input class="form-input flex w-full rounded-full text-[#0d191b] dark:text-white border-[#cfe3e7] dark:border-white/10 bg-[#f8fbfc] dark:bg-white/5 h-14 pl-12 pr-4 focus:border-primary focus:ring-2 focus:ring-primary/20 placeholder:text-[#4c8d9a]/50" placeholder="Ej: Juan Pérez" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d191b] dark:text-white text-sm font-bold px-1">Correo Electrónico</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#4c8d9a]">mail</span>
+<input class="form-input flex w-full rounded-full text-[#0d191b] dark:text-white border-[#cfe3e7] dark:border-white/10 bg-[#f8fbfc] dark:bg-white/5 h-14 pl-12 pr-4 focus:border-primary focus:ring-2 focus:ring-primary/20 placeholder:text-[#4c8d9a]/50" placeholder="tu@correo.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d191b] dark:text-white text-sm font-bold px-1">Contraseña</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#4c8d9a]">lock</span>
+<input class="form-input flex w-full rounded-full text-[#0d191b] dark:text-white border-[#cfe3e7] dark:border-white/10 bg-[#f8fbfc] dark:bg-white/5 h-14 pl-12 pr-4 focus:border-primary focus:ring-2 focus:ring-primary/20 placeholder:text-[#4c8d9a]/50" placeholder="Mínimo 8 caracteres" type="password"/>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 pt-4">
+<button class="flex w-full items-center justify-center rounded-full h-14 bg-primary text-[#0d191b] text-base font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-lg shadow-primary/20" type="submit">
+                            Continuar al perfil de negocio
+                            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+<p class="text-center text-[#4c8d9a] text-sm">
+                            ¿Ya tienes una cuenta? <a class="text-primary font-bold hover:underline" href="#">Inicia sesión aquí</a>
+</p>
+</div>
+</form>
+</div>
+<!-- Coastal Illustration / Brand element -->
+<div class="flex flex-col items-center gap-4 opacity-40">
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary">waves</span>
+<span class="material-symbols-outlined text-primary">sailing</span>
+<span class="material-symbols-outlined text-primary">sunny</span>
+</div>
+<p class="text-[#4c8d9a] text-xs font-medium tracking-widest uppercase">Hecho por y para Guanaquerinos</p>
+</div>
+</div>
+</main>
+<!-- Footer for context -->
+<div id="site-footer"></div>
+<!-- Background Decoration -->
+<div class="fixed top-0 right-0 -z-10 w-1/3 h-full opacity-5 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-l from-primary to-transparent"></div>
+</div>
+
+  <script src="../js/include.js"></script>
+</body></html>

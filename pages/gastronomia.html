@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Directorio Gastronómico - GuanaquerosNet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#1c140d] dark:text-white transition-colors duration-200">
+<!-- Navbar Section -->
+<div id="site-header"></div>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<!-- Page Heading -->
+<div class="mb-10 text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
+                    Directorio Gastronómico <br/><span class="text-primary">de Guanaqueros</span>
+</h1>
+<p class="text-lg opacity-80 max-w-xl">
+                    Descubre los mejores sabores locales: desde pescados recién extraídos de la bahía hasta las famosas empanadas de mariscos.
+                </p>
+</div>
+<button class="flex items-center gap-2 bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 py-3 rounded-xl font-bold text-sm shadow-sm hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-primary">map</span>
+                Ver Mapa Interactivo
+            </button>
+</div>
+<!-- Filter Bar -->
+<div class="sticky top-20 z-40 bg-background-light/95 dark:bg-background-dark/95 py-4 -mx-4 px-4 mb-8">
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-6 text-white font-bold cursor-pointer">
+<span class="material-symbols-outlined text-sm">restaurant</span>
+<span class="text-sm">Todos</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 font-medium hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary">set_meal</span>
+<span class="text-sm">Pescados y Mariscos</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 font-medium hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary">cookie</span>
+<span class="text-sm">Empanadas</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 font-medium hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary">skillet</span>
+<span class="text-sm">Comida Casera</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 font-medium hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary">coffee</span>
+<span class="text-sm">Cafeterías</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 font-medium hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary">outdoor_grill</span>
+<span class="text-sm">Parrilladas</span>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] px-5 font-medium hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary">icecream</span>
+<span class="text-sm">Heladerías</span>
+</div>
+</div>
+</div>
+<!-- Restaurant Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-[#2d2116] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20">
+<div class="relative aspect-video">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" alt="Fresh seafood platter with ocean view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdrbjCop3qbMvVZhQMQqIEyDEM3s-CPc8vn3nVDGh4-EE1OdykpEAVHZbU4nQvthE5Lfqt0W8lzspXsHtwPQyrq5JMwoF6hybE6wF_9Tx1UHiegd6eb3Y-M-dxNIL5VfLE7p_53bnaQaAB6-JQ59oaLHn9a7bLwh8sNRFerlPOY0-iMW9ZxOap0p8K-S683aJi3C1OKVzbTy23eqHKHuanyR1lJ3j6ZHppZZM_bp4idRIiUn-fpDn1bEujwIf_yk0P71DEPjIWrY8')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Abierto Ahora</span>
+<span class="bg-black/50 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Favorito</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">El Mirador del Mar</h3>
+<div class="flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="ml-1 text-sm">4.8</span>
+</div>
+</div>
+<p class="text-sm font-medium opacity-60 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+                        Pescados y Mariscos • $$$
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-[#f4ede7] dark:border-[#3d2e21]">
+<div class="flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="text-xs font-semibold">Costanera Central</span>
+</div>
+<span class="text-primary font-bold text-xs uppercase cursor-pointer hover:underline">Ver detalles</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-[#2d2116] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20">
+<div class="relative aspect-video">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" alt="Golden fried empanadas on a tray" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFJZ_5dGKq17LjWsYcik6ZQaAQ44NB9sS4AxnjUh60-g71DifD6TJYCCOIUI1yhpZhSXrTq3DNSJeMt_0sfDLclkTb-319JubuBcgyQ-Eo5IoUs_7UcQs9AeDVkuDvclQxv7T7ImqY1imKjiqc1-qxQMUc86oMYrYVFilocEko7DEwppBKUWkrMkhuCo5sZmk6t9_Qf4afGT_ogy1rMF9BCwbr5fHGUyw02jiKPPsPU7WZLjtK0IWrfJWIOTtiFLIWhxIMbp_uM7c')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Abierto Ahora</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Doña Rosa</h3>
+<div class="flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="ml-1 text-sm">4.6</span>
+</div>
+</div>
+<p class="text-sm font-medium opacity-60 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+                        Empanadas y Fritos • $
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-[#f4ede7] dark:border-[#3d2e21]">
+<div class="flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="text-xs font-semibold">Pueblo de Guanaqueros</span>
+</div>
+<span class="text-primary font-bold text-xs uppercase cursor-pointer hover:underline">Ver detalles</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-[#2d2116] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20">
+<div class="relative aspect-video">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" alt="Traditional Chilean home cooked stew" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7z7N_eOJU0EAYavNbw-hxi0yVv0ZFB-4sz9JopkExW7XId4OdetDsIS-mM5SrUyPE1e7lvb7iOE-6LDJ9CPH_YIaL1YTwsaQzFEuv5n6xbzH-0YVDpG3JLH5ChGQa37AAjEHZuvZ4STW3IBVpirqPWIgVxWwcdYQw90kHKr6surwEz-gO4fx00-PThoIeFCm2G6E23hjVFdgZk9RhzfTemY8l3qOED_4ZqVC0NON32p7OL6Lc7vrOQY-Ek-S1QZFwcncmpnZw0yc')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-gray-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Cerrado</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Sabor Costeño</h3>
+<div class="flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="ml-1 text-sm">4.2</span>
+</div>
+</div>
+<p class="text-sm font-medium opacity-60 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+                        Comida Casera • $$
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-[#f4ede7] dark:border-[#3d2e21]">
+<div class="flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="text-xs font-semibold">Sector Playa Norte</span>
+</div>
+<span class="text-primary font-bold text-xs uppercase cursor-pointer hover:underline">Ver detalles</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-[#2d2116] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20">
+<div class="relative aspect-video">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" alt="Cozy cafe interior with coffee and pastries" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyLNTFyuk_x2rr0T4RnKF_hFMQWaXBsouZ1rfJpBDbstDa2zjZI9gkDSs4kxsAX1yw08hQPULvKNbC-6kbPFseKoCk3IxEwyUKgHEJGRRvIjzDqnc3RS1F5SAos9_l3U-VOo2gzAh64-vBgf_IfcNzZvveXI4VQWymvGmjQCUoBquNhkGQy2vgoknJ8XFi9_t_54WgukkllKcyZyJ1W2cdCs2igciF9zLqJjWBnWRRfHbpdymIgxRV9YskV1LyEeUWW2zGw1g6bdE')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Abierto Ahora</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Café de la Bahía</h3>
+<div class="flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="ml-1 text-sm">4.9</span>
+</div>
+</div>
+<p class="text-sm font-medium opacity-60 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+                        Cafetería y Pastelería • $$
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-[#f4ede7] dark:border-[#3d2e21]">
+<div class="flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="text-xs font-semibold">Costanera Central</span>
+</div>
+<span class="text-primary font-bold text-xs uppercase cursor-pointer hover:underline">Ver detalles</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-[#2d2116] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20">
+<div class="relative aspect-video">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" alt="Assorted grilled meats on a platter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7lOFFndE4BKbTzitndDSmEhOVW9905EXEOzxOj8UPIx4F5OFE5GpxgD52FwtTcmw8I2uRUB0y9DBiZISG0CphJ4FinxYhkblx8GKwwG8qTUPlEPK82atOCKim6eGt7YAcHHeRR7cYXML2dnyOq9g9U45yG5_rA8JPsib-jOYVMqNigTy3WTq2_8BAaVn71kod3yIg-bHEvclxMKjxidQbhHEjWU3ckMklFXkyjqZTx_yuMY1oWm3mncV9i7m-K277QAzdm37UGNQ')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Abierto Ahora</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">El Gaucho</h3>
+<div class="flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="ml-1 text-sm">4.4</span>
+</div>
+</div>
+<p class="text-sm font-medium opacity-60 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+                        Parrilladas • $$$
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-[#f4ede7] dark:border-[#3d2e21]">
+<div class="flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="text-xs font-semibold">Acceso Principal</span>
+</div>
+<span class="text-primary font-bold text-xs uppercase cursor-pointer hover:underline">Ver detalles</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-[#2d2116] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-transparent hover:border-primary/20">
+<div class="relative aspect-video">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" alt="Traditional seafood soup in clay pot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH20AEc5Oz8lxGMVQFE80QWbTCjPxY2WyHbveQ82fhgIaLYnh818odVrfXb4uq7phOcsegliMe4aOTfyyCWjmJLo_CEQqmVQaBrHWRwyHXzbMY3r28apk2a-ax-VVI-WDKKE4PnwUZh1VfZnluQA2c7Qq8F9lXCHk6pjI9EFICGGb3nxG4k-EZi7xD0qUxQ9glIiBOshBrjHxi4qRVIYGHWZktfFovrtJPXCps6ZgzaOjLUsFIMOjYjaQCseUj-ypuVca8HEDex70')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Abierto Ahora</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">La Picá del Puerto</h3>
+<div class="flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="ml-1 text-sm">4.7</span>
+</div>
+</div>
+<p class="text-sm font-medium opacity-60 mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-base">restaurant_menu</span>
+                        Mariscos • $$
+                    </p>
+<div class="flex items-center justify-between pt-4 border-t border-[#f4ede7] dark:border-[#3d2e21]">
+<div class="flex items-center gap-1 opacity-70">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="text-xs font-semibold">Muelle Pesquero</span>
+</div>
+<span class="text-primary font-bold text-xs uppercase cursor-pointer hover:underline">Ver detalles</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-center gap-2">
+<a class="flex size-10 items-center justify-center rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] opacity-50 cursor-not-allowed" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="flex size-10 items-center justify-center rounded-xl bg-primary text-white font-bold" href="#">1</a>
+<a class="flex size-10 items-center justify-center rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] font-semibold hover:border-primary transition-colors" href="#">2</a>
+<a class="flex size-10 items-center justify-center rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] font-semibold hover:border-primary transition-colors" href="#">3</a>
+<a class="flex size-10 items-center justify-center rounded-xl bg-white dark:bg-[#3d2e21] border border-[#f4ede7] dark:border-[#4d3a2a] font-semibold hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<div id="site-footer"></div>
+
+  <script src="../js/include.js"></script>
+</body></html>

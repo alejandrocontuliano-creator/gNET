@@ -1,0 +1,38 @@
+<footer class="mt-16 border-t border-slate-200 bg-slate-50">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 grid gap-8 md:grid-cols-3">
+    <div class="space-y-3">
+      <div class="text-slate-900 font-extrabold text-lg">Guanaqueros<span class="text-teal-600">Net</span></div>
+      <p class="text-sm text-slate-600">
+        Plataforma comunitaria y turística de Guanaqueros. Información local, directorios, eventos y utilidad pública.
+      </p>
+      <div class="flex gap-3 text-sm font-semibold">
+        <a class="text-teal-700 hover:text-teal-900" href="{{BASE}}pages/contacto.html">Contacto</a>
+        <span class="text-slate-300">•</span>
+        <a class="text-teal-700 hover:text-teal-900" href="{{BASE}}pages/comunidad.html">Sumar emprendimiento</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 text-sm">
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/guanaqueros.html">Identidad y Cultura</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/directorio.html">Servicios</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/gastronomia.html">Gastronomía</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/eventos.html">Eventos</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/emergencias.html">Emergencias</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/mapa.html">Mapa</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/noticias.html">Noticias</a>
+      <a class="text-slate-700 hover:text-teal-700" href="{{BASE}}pages/admin-demo.html">Panel (demo)</a>
+    </div>
+
+    <div class="space-y-3">
+      <div class="text-sm font-extrabold text-slate-900">Redes</div>
+      <p class="text-sm text-slate-600">Instagram: <span class="font-semibold">@GuanaquerosNet</span></p>
+      <p class="text-xs text-slate-500">
+        © <span id="gn-year"></span> GuanaquerosNet. Hecho para la comunidad.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('gn-year').textContent = new Date().getFullYear();
+  </script>
+</footer>
